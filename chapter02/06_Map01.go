@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func Map(f func(int) int, l []int) []int {
+func mapInt(f func(int) int, l []int) []int {
 	j := make([]int, len(l))
 	for k, v := range l {
 		j[k] = f(v)
@@ -15,5 +15,5 @@ func main() {
 	f := func(i int) int {
 		return i * i
 	}
-	fmt.Printf("%v", Map(f, m))
+	fmt.Printf("%v", mapInt(f, m))
 }
